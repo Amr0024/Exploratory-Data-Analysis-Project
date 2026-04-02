@@ -1,75 +1,86 @@
-# 📊 Customer Purchase Behavior Analysis (EDA)
+# Customer Purchase Behaviour — Exploratory Data Analysis
 
-## 🔍 Overview
-This project performs **Exploratory Data Analysis (EDA)** on a real-world online retail dataset to uncover insights about customer behavior, sales trends, and revenue distribution.
-
-The goal is to transform raw transactional data into **clear business insights** using Python.
-
----
-
-## 📂 Dataset
-- Source: UCI Online Retail Dataset  
-- Link: https://archive.ics.uci.edu/ml/datasets/online+retail  
-
-The dataset contains:
-- Transactions
-- Product details
-- Customer IDs
-- Invoice dates
-- Quantities and prices
+**Tools:** Python · pandas · Matplotlib · Seaborn  
+**Dataset:** UCI Online Retail Dataset (541K+ transactions, 8 countries)  
+**Notebook:** `EDA_customer_analysis.ipynb`
 
 ---
 
-## 🛠️ Tools & Libraries
-- Python 🐍  
-- pandas  
-- matplotlib  
-- seaborn  
+## Overview
+
+Retail businesses often lack clarity on which customers, products, and time periods drive the most value. This project analyses a real-world transactional dataset to surface those patterns and translate them into concrete business recommendations.
 
 ---
 
-## 📌 Project Workflow
+## Key Findings
 
-### 1. Data Cleaning
-- Removed missing customer IDs
-- Removed invalid transactions (negative quantities)
-- Converted date columns
-
-### 2. Feature Engineering
-- Created revenue column
-- Extracted time features (month, hour)
-
-### 3. Analysis Performed
-- Monthly sales trends
-- Top-selling products
-- Top customers by revenue
-- Sales distribution by country
-
-### 4. Visualization
-- Line charts for trends
-- Bar charts for rankings
-- Distribution analysis
+- **Revenue concentration:** The top 5% of customers account for a disproportionate share of total revenue — a classic Pareto distribution with direct implications for loyalty programme targeting
+- **Seasonality:** Sales peak strongly in Q4 (October–December), suggesting inventory and marketing efforts should front-load that period
+- **Geographic concentration:** The UK dominates transaction volume, but several EU markets show high average order values worth prioritising
+- **Product performance:** A small subset of SKUs drives the majority of units sold; the long tail has high variety but low individual impact
 
 ---
 
-## 📈 Key Insights
-- A small percentage of customers generate a large portion of revenue
-- Sales show strong seasonal patterns
-- Certain products dominate overall sales
-- Revenue is concentrated in a few countries
+## Screenshots
+
+<!-- Upload your chart images to this repo, then replace the filenames below -->
+
+![Monthly Sales Trend](images/monthly_sales_trend.png)
+*Monthly revenue over time — clear Q4 spike visible*
+
+![Top Customers by Revenue](images/top_customers.png)
+*Revenue concentration among top customers*
+
+![Sales by Country](images/sales_by_country.png)
+*Geographic distribution of transactions*
 
 ---
 
-## 🚀 Outcome
-This project demonstrates how raw retail data can be transformed into **actionable business insights** using EDA techniques.
+## Project Workflow
+
+**1. Data cleaning**
+- Removed ~25% of rows with missing Customer IDs (guest checkouts)
+- Filtered negative quantities (returns/cancellations) for sales-only analysis
+- Parsed invoice dates and corrected data types
+
+**2. Feature engineering**
+- Created `Revenue` column (`Quantity × UnitPrice`)
+- Extracted `Month`, `Hour`, and `DayOfWeek` from invoice timestamps
+- Built customer-level aggregates for revenue ranking
+
+**3. Analysis**
+- Monthly and hourly sales trends
+- Top 10 products by units sold and by revenue
+- Top customers by total spend
+- Country-level transaction and revenue breakdown
+- Revenue distribution across the customer base
 
 ---
 
-## 📁 Files
-- `eda_analysis.ipynb` → Full analysis notebook
-- `Online Retail.xlsx` → Dataset (not included due to size)
+## Business Recommendations
+
+| Finding | Recommendation |
+|---|---|
+| Revenue concentrated in top customers | Build a tiered loyalty programme targeting the top 10% |
+| Strong Q4 seasonality | Increase stock and ad spend from September |
+| High-value EU markets | Expand marketing to Netherlands and Germany |
+| Long-tail products with low sales | Consider SKU rationalisation to reduce holding costs |
 
 ---
 
-## 👤 Author
-Amr N
+## How to Run
+```bash
+git clone https://github.com/Amr0024/Exploratory-Data-Analysis-Project.git
+cd Exploratory-Data-Analysis-Project
+pip install pandas matplotlib seaborn openpyxl
+jupyter notebook EDA_customer_analysis.ipynb
+```
+
+Dataset: download from [UCI ML Repository](https://archive.ics.uci.edu/ml/datasets/online+retail) and place as `Online Retail.xlsx` in the project folder.
+
+---
+
+## Author
+
+**Amr Nabil** — Computer Science graduate, Data Science & Machine Learning  
+[LinkedIn](https://www.linkedin.com/in/amr-nabil623813220/) · [GitHub](https://github.com/Amr0024)
