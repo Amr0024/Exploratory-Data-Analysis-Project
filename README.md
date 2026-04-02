@@ -23,7 +23,7 @@ Retail businesses often lack clarity on which customers, products, and time peri
 
 ## Screenshots
 
-<!-- Upload your chart images to this repo, then replace the filenames below -->
+
 
 ![Monthly Sales Trend](images/monthly_sales_trend.png)
 *Monthly revenue over time — clear Q4 spike visible*
@@ -31,8 +31,7 @@ Retail businesses often lack clarity on which customers, products, and time peri
 ![Top Customers by Revenue](images/top_customers.png)
 *Revenue concentration among top customers*
 
-![Sales by Country](images/sales_by_country.png)
-*Geographic distribution of transactions*
+
 
 ---
 
