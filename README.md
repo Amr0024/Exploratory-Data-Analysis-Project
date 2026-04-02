@@ -32,7 +32,7 @@ Retail businesses often lack clarity on which customers, products, and time peri
 *Revenue concentration among top customers*
 
 ![Top Customers by Revenue](images/top_customers.png)
-*Revenue concentration among top customers*
+
 
 
 
