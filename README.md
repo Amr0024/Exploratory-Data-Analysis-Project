@@ -85,4 +85,4 @@ Dataset: download from [UCI ML Repository](https://archive.ics.uci.edu/ml/datase
 ## Author
 
 **Amr Nabil** — Computer Science graduate, Data Science & Machine Learning  
-[LinkedIn](https://www.linkedin.com/in/amr-nabil623813220/) · [GitHub](https://github.com/Amr0024)
+[LinkedIn](https://www.linkedin.com/in/amr-nabil-623813220/) · [GitHub](https://github.com/Amr0024)
