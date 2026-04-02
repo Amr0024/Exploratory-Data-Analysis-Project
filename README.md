@@ -24,7 +24,7 @@ Retail businesses often lack clarity on which customers, products, and time peri
 ## Screenshots
 
 
-*Monthly revenue over time — clear Q4 spike visible*
+*Monthly revenue over time*
 
 ![Monthly Sales Trend](images/monthly_sales_trend.png)
 
